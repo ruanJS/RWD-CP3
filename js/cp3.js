@@ -23,7 +23,7 @@ inputSenha.addEventListener("focus", ()=>{
 
 inputSenha.addEventListener("keyup", ()=>{
 
-    const lblSenha = document.querySelector("label[for='inputSenha']");
+    const lblSenha = document.querySelector("label[for='senha']");
     if(inputSenha.value.length < 5){
         inputSenha.setAttribute("style","outline-color: #ff0000;");
         lblSenha.setAttribute("style","color: #ff0000;");
