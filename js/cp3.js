@@ -15,3 +15,21 @@ inputNome.addEventListener("keyup", ()=>{
     }
     //inputEmail.setAttribute("style","outline-color: #ff0000;");
 });
+
+const inputSenha = document.querySelector("#senha");
+inputSenha.addEventListener("focus", ()=>{
+    inputSenha.setAttribute("style","outline-color: #ff0000;");
+})
+
+inputSenha.addEventListener("keyup", ()=>{
+
+    const lblSenha = document.querySelector("label[for='senha']");
+    if(inputSenha.value.length < 5){
+        inputSenha.setAttribute("style","outline-color: #ff0000;");
+        lblSenha.setAttribute("style","color: #ff0000;");
+    }else{
+        inputSenha.setAttribute("style","outline-color: #00ff00;");
+        lblSenha.setAttribute("style","color: #00ff00;");
+    }
+    //inputSenha.setAttribute("style","outline-color: #ff0000;");
+});
