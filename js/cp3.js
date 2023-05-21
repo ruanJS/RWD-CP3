@@ -29,5 +29,7 @@ inputSenha.addEventListener("keyup", ()=>{
         lblSenha.setAttribute("style","color: #ff0000;");
     }else{
         inputSenha.setAttribute("style","outline-color: #00ff00;");
-        
+        lblSenha.setAttribute("style","color: #00ff00;");
+    }
+    //inputSenha.setAttribute("style","outline-color: #ff0000;");
 });
