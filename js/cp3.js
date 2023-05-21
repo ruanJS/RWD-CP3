@@ -15,3 +15,9 @@ inputNome.addEventListener("keyup", ()=>{
     }
     //inputEmail.setAttribute("style","outline-color: #ff0000;");
 });
+
+const inputSenha = document.querySelector("#senha");
+inputSenha.addEventListener("focus", ()=>{
+    inputSenha.setAttribute("style","outline-color: #ff0000;");
+})
+
