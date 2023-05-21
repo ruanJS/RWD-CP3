@@ -51,3 +51,22 @@ inputSenha.addEventListener("keyup", ()=>{
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 });
+
+const inputConfirmacaoDeSenha = document.querySelector("#confirmaçãoDeSenha");
+inputConfirmacaoDeSenha.addEventListener("focus", ()=>{
+    inputConfirmacaoDeSenha.setAttribute("style","outline-color: #ff0000;");
+})
+
+inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
+
+    const lblConfirmacaoDeSenha = document.querySelector("label[for='confirmaçãoDeSenha']");
+    if(inputConfirmacaoDeSenha.value.length < 5){
+        inputConfirmacaoDeSenha.setAttribute("style","outline-color: #ff0000;");
+        lblConfirmacaoDeSenha.setAttribute("style","color: #ff0000;");
+    }else{
+        inputConfirmacaoDeSenha.setAttribute("style","outline-color: #00ff00;");
+        lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
+    }
+    //inputSenha.setAttribute("style","outline-color: #ff0000;");
+});
+
