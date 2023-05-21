@@ -15,3 +15,21 @@ inputNome.addEventListener("keyup", ()=>{
     }
     //inputEmail.setAttribute("style","outline-color: #ff0000;");
 });
+
+const inputEmail = document.querySelector("#email");
+inputEmail.addEventListener("focus", ()=>{
+    inputEmail.setAttribute("style","outline-color: #ff0000;");
+})
+
+inputEmail.addEventListener("keyup", ()=>{
+
+    const lblEmail = document.querySelector("label[for='email']");
+    if(inputEmail.value.length < 5){
+        inputEmail.setAttribute("style","outline-color: #ff0000;");
+        lblEmail.setAttribute("style","color: #ff0000;");
+    }else{
+        inputEmail.setAttribute("style","outline-color: #00ff00;");
+        lblEmail.setAttribute("style","color: #00ff00;");
+    }
+    //inputEmail.setAttribute("style","outline-color: #ff0000;");
+});
