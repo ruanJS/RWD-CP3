@@ -31,8 +31,41 @@ inputEmail.addEventListener("keyup", ()=>{
         inputEmail.setAttribute("style","outline-color: #00ff00;");
         lblEmail.setAttribute("style","color: #00ff00;");
     }
-    //inputEmail.setAttribute("style","outline-color: #ff0000;");
 });
+
+inputEmail.addEventListener('blur', ()=>{
+    if (inputEmail.value === '' || inputEmail.value.length < 5) {
+       mostrarErro('O campo deve conter pelo menos 5 caracteres.');
+        } else {
+           removerErro();
+        }
+    });
+
+    function mostrarErro(mensagem) {
+       erroEmail = document.createElement('p');
+           erroEmail.style.color = 'red';
+           erroEmail.textContent = mensagem;
+
+       document.body.appendChild(erroEmail);
+    }
+       
+    function removerErro() {
+       if (erroEmail) {
+      erroEmail.remove();
+       erroEmail = null;
+   }}
+
+   const formulario = document.querySelector("index.html");
+
+   formulario.addEventListener("submit", function(event) {
+       const campoEmail = document.getElementById("email");
+       const email = email.value;
+     
+       if (!email.includes("@")) {
+         event.preventDefault(); // Impede o envio do formulário
+       }
+     });
+
 
 const inputSenha = document.querySelector("#senha");
 inputSenha.addEventListener("focus", ()=>{
