@@ -122,9 +122,6 @@ inputEmail.addEventListener('blur', ()=>{
      }});
     
 
-const inputSenha = document.querySelector("#senha");
-inputSenha.addEventListener("focus", ()=>{
-
     const inputSenha = document.querySelector("#senha");
     inputSenha.addEventListener("focus", ()=>{
 
@@ -173,5 +170,3 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 })
 });
-
-

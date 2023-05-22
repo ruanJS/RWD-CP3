@@ -101,6 +101,17 @@ img{
 
 
 }
-
-
+#darkModeButton{
+width: 100%;
+  padding: 10px 0px;
+  margin: 25px; 
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color:#2b132b;
+  cursor: pointer;
+  box-shadow:  0px 10px 40px -12px #00ff8052;
 }
