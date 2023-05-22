@@ -24,7 +24,7 @@ inputNome.addEventListener("focus", ()=>{
 inputSegundoNome.addEventListener("keyup", ()=>{
 
     const segundoNome = document.querySelector("label[for='segundoNome']");
-    if(inputSegundoNome.value.length < 3){
+    if(inputSegundoNome.value.length === '' || inputSegundoNome.value.length< 3){
         inputSegundoNome.setAttribute("style","outline-color: #ff0000;");
         segundoNome.setAttribute("style","color: #ff0000;");
     }else{
@@ -33,3 +33,23 @@ inputSegundoNome.addEventListener("keyup", ()=>{
     }
 
 });
+inputSegundoNome.addEventListener('blur', ()=>{
+    if (inputSegundoNome.value === '' || inputSegundoNome.value.length < 5) {
+      mostrarErro('O campo deve conter pelo menos 5 caracteres, e não pode estar vazio');
+    } else {
+      removerErro();
+    }
+  });
+  function mostrarErro(mensagem) {
+    
+    erroNome = document.createElement('p');
+    erroNome.style.color = 'red';
+    erroNome.textContent = mensagem;
+    document.body.appendChild(erroNome);
+  }
+  function removerErro() {
+    if (erroNome) {
+      erroNome.remove();
+      erroNome = null;
+    }
+  }
