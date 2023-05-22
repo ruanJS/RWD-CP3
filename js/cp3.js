@@ -15,7 +15,7 @@ inputNome.addEventListener("keyup", ()=>{
     }
     //inputEmail.setAttribute("style","outline-color: #ff0000;");
 });
-
+// Criando js dde input senha junto com a validação.
 const inputSenha = document.querySelector("#senha");
 inputSenha.addEventListener("focus", ()=>{
     inputSenha.setAttribute("style","outline-color: #ff0000;");
