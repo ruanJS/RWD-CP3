@@ -6,38 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/cp3.js" defer></script>
     <title>Formulário de Cadastro</title>
 
-<body>
+<body> 
   <div class="container">
           <div class="main-login">
               <div class=" left-login">
                   <h1> Faça login<br> E entre para o nosso time.</h1>
                   <img src="./img/sign-up-animate.svg" class="left-login-imagem" alt="Astronauta animado">
               </div>
+              <form action="./index.html" method="GET" onsubmit="return false"></form>
                 <div class="right-login">
                     <div class="card-login">
                         <div class="textfield">
                             <label for="primeiroNome">Primeiro Nome:</label>
-                            <input type="text" name="primeiroNome" placeholder="insira o primeiro nome...">
+                            <input type="text" id="primeiroNome" name="primeiroNome" placeholder="insira o primeiro nome...">
                         </div>
                         <div class="textfield">
                             <label for="segundoNome">Segundo Nome:</label>
-                            <input type="text" name="segundoNome" placeholder="insira o segundo nome...">
+                            <input type="text" id="segundoNome" name="segundoNome" placeholder="insira o segundo nome...">
                         </div>
                         <div class="textfield">
                             <label for="email">Email:</label>
-                            <input type="text" name="email" placeholder="insira seu email...">
+                            <input type="text" id="email" name="email" placeholder="insira seu email...">
                         </div>
                         <div class="textfield">
                             <label for="senha">Senha:</label>
-                            <input type="text" name="senha" placeholder="insira uma senha...">
+                            <input type="text" id="senha" name="senha" placeholder="insira uma senha...">
                         </div>
                         <div class="textfield">
                             <label for="confirmaçãoDeSenha">Confirmação de Senha:</label>
-                            <input type="text" name="confirmaçãoDeSenha" placeholder="confirme sua senha...">
+                            <input type="text" id="confirmaçãoDeSenha" name="confirmaçãoDeSenha" placeholder="confirme sua senha...">
                         </div>
-                        <button id="cadastrar">Cadastrar</button>
+                        <button type="submit" id="cadastrar">Cadastrar</button>
+                      </form>
                     </div>
                 </div>   
             </div>
