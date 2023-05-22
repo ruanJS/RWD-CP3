@@ -1,3 +1,4 @@
+//NOME
 const inputNome = document.querySelector("#primeiroNome");
 let erroNome;
 
@@ -6,13 +7,9 @@ inputNome.addEventListener("focus", ()=>{
 })
 
 inputNome.addEventListener("keyup", ()=>{
-
     const lblNome = document.querySelector("label[for='primeiroNome']");
 
-    if(inputNome.value.length < 3){
-
     if(inputNome.value.length ==='' || inputNome.value.length < 5){
-
         inputNome.setAttribute("style","outline-color: #ff0000;");
         lblNome.setAttribute("style","color: #ff0000;");
 
@@ -20,57 +17,50 @@ inputNome.addEventListener("keyup", ()=>{
         inputNome.setAttribute("style","outline-color: #00ff00;");
         lblNome.setAttribute("style","color: #00ff00;");
     }
-    }
 });
 
+//SEGUNDO NOME
 const inputSegundoNome = document.querySelector("#segundoNome");
-inputNome.addEventListener("focus", ()=>{
-    inputNome.setAttribute("style","outline-color: #ff0000;");
+
+    inputSegundoNome.addEventListener("focus", ()=>{
+    inputSegundoNome.setAttribute("style","outline-color: #ff0000;");
 })
 
-inputSegundoNome.addEventListener("keyup", ()=>{
+    inputSegundoNome.addEventListener("keyup", ()=>{
 
     const segundoNome = document.querySelector("label[for='segundoNome']");
-    if(inputSegundoNome.value.length === '' || inputSegundoNome.value.length< 3){
+
+    if(inputSegundoNome.value.length === '' || inputSegundoNome.value.length < 5){
         inputSegundoNome.setAttribute("style","outline-color: #ff0000;");
         segundoNome.setAttribute("style","color: #ff0000;");
     }else{
         inputSegundoNome.setAttribute("style","outline-color: #00ff00;");
         segundoNome.setAttribute("style","color: #00ff00;");
     }
-
 });
 
-inputSegundoNome.addEventListener('blur', ()=>{
+    inputSegundoNome.addEventListener('blur', ()=>{
     if (inputSegundoNome.value === '' || inputSegundoNome.value.length < 5) {
       mostrarErro('O campo deve conter pelo menos 5 caracteres, e não pode estar vazio');
     }
 });
 
-inputNome.addEventListener('blur', ()=>{
-    if (inputNome.value === '' || inputNome.value.length < 5) {
-      mostrarErro('O campo deve conter pelo menos 5 caracteres.');
-
-    } else {
-      removerErro();
-    }
-  });
-
   function mostrarErro(mensagem) {
-    
     erroNome = document.createElement('p');
     erroNome.style.color = 'red';
     erroNome.textContent = mensagem;
     document.body.appendChild(erroNome);
   }
+  
   function removerErro() {
     if (erroNome) {
       erroNome.remove();
       erroNome = null;
     }
-
   }
 
+
+//E-MAIL
 const inputEmail = document.querySelector("#email");
 inputEmail.addEventListener("focus", ()=>{
     inputEmail.setAttribute("style","outline-color: #ff0000;");
@@ -86,7 +76,6 @@ inputEmail.addEventListener("keyup", ()=>{
         inputEmail.setAttribute("style","outline-color: #00ff00;");
         lblEmail.setAttribute("style","color: #00ff00;");
     }
-
 });
 
 inputEmail.addEventListener('blur', ()=>{
@@ -125,8 +114,6 @@ inputEmail.addEventListener('blur', ()=>{
 const inputSenha = document.querySelector("#senha");
 inputSenha.addEventListener("focus", ()=>{
 
-
-
     const inputSenha = document.querySelector("#senha");
     inputSenha.addEventListener("focus", ()=>{
 
@@ -143,17 +130,16 @@ inputSenha.addEventListener("keyup", ()=>{
         inputSenha.setAttribute("style","outline-color: #00ff00;");
         lblSenha.setAttribute("style","color: #00ff00;");
     }
-    //inputSenha.setAttribute("style","outline-color: #ff0000;");
 });
 
-const inputConfirmacaoDeSenha = document.querySelector("#confirmaçãoDeSenha");
+const inputConfirmacaoDeSenha = document.querySelector("#confirmacaoDeSenha");
 inputConfirmacaoDeSenha.addEventListener("focus", ()=>{
     inputConfirmacaoDeSenha.setAttribute("style","outline-color: #ff0000;");
 })
 
 inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
 
-    const lblConfirmacaoDeSenha = document.querySelector("label[for='confirmaçãoDeSenha']");
+    const lblConfirmacaoDeSenha = document.querySelector("label[for='confirmacaoDeSenha']");
     if(inputConfirmacaoDeSenha.value.length < 5){
         inputConfirmacaoDeSenha.setAttribute("style","outline-color: #ff0000;");
         lblConfirmacaoDeSenha.setAttribute("style","color: #ff0000;");
@@ -161,6 +147,7 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
         inputConfirmacaoDeSenha.setAttribute("style","outline-color: #00ff00;");
         lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
     }
+
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 
 });
@@ -179,7 +166,6 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
       
         document.getElementById("meu-formulario").submit();
       }
-      
 });
 
 
