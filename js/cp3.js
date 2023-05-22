@@ -163,6 +163,8 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 
+});
+
 
     function validarFormulario(event) {
         event.preventDefault(); 
