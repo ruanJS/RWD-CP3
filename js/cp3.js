@@ -147,25 +147,7 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
         inputConfirmacaoDeSenha.setAttribute("style","outline-color: #00ff00;");
         lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
     }
-
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
-
-});
-
-
-    function validarFormulario(event) {
-        event.preventDefault(); 
-
-        let senha = document.getElementById("senha").value;
-        let confirmacaoDeSenha = document.getElementById("confirmacaoDeSenha").value;
-      
-        if (senha !== confirmacaoDeSenha) {
-          alert("A senha e a confirmação de senha não correspondem!");
-          return false;
-        }
-      
-        document.getElementById("meu-formulario").submit();
-      }
 });
 
 
