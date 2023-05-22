@@ -72,6 +72,19 @@ inputSenha.addEventListener("keyup", ()=>{
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 });
+const inputSenha = document.querySelector("#senha");
+const eyePass = document.querySelector(".fa");
+
+eyePass.addEventListener("click", ()=>{
+    const inputSenha = document.querySelector("#senha");
+    if(inputSenha.getAttribute("type") == "password"){
+        inputSenha.setAttribute("type","text");
+        eyePass.setAttribute("class","fa fa-eye-slash");
+    }else{
+       inputSenha.setAttribute("type","password");
+       eyePass.setAttribute("class","fa fa-eye");
+    }
+});
 
 const inputConfirmacaoDeSenha = document.querySelector("#confirmaçãoDeSenha");
 inputConfirmacaoDeSenha.addEventListener("focus", ()=>{
