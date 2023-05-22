@@ -68,7 +68,7 @@ inputNome.addEventListener('blur', ()=>{
     }
 
   }
-=======
+
   }
 const inputEmail = document.querySelector("#email");
 inputEmail.addEventListener("focus", ()=>{
@@ -117,10 +117,9 @@ inputEmail.addEventListener('blur', ()=>{
        const email = email.value;
      
        if (!email.includes("@")) {
-         event.preventDefault(); // Impede o envio do formulário
-       }
-     });
-
+         event.preventDefault(); 
+     }});
+    
 
 const inputSenha = document.querySelector("#senha");
 inputSenha.addEventListener("focus", ()=>{
@@ -162,5 +161,23 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
         lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
+
+
+    function validarFormulario(event) {
+        event.preventDefault(); 
+
+        let senha = document.getElementById("senha").value;
+        let confirmacaoDeSenha = document.getElementById("confirmacaoDeSenha").value;
+      
+        if (senha !== confirmacaoDeSenha) {
+          alert("A senha e a confirmação de senha não correspondem!");
+          return false;
+        }
+      
+        document.getElementById("meu-formulario").submit();
+      }
+      
+});
+
 });
 
