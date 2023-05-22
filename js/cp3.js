@@ -8,7 +8,11 @@ inputNome.addEventListener("focus", ()=>{
 inputNome.addEventListener("keyup", ()=>{
 
     const lblNome = document.querySelector("label[for='primeiroNome']");
+
+    if(inputNome.value.length < 3){
+
     if(inputNome.value.length ==='' || inputNome.value.length < 5){
+
         inputNome.setAttribute("style","outline-color: #ff0000;");
         lblNome.setAttribute("style","color: #ff0000;");
 
@@ -16,10 +20,36 @@ inputNome.addEventListener("keyup", ()=>{
         inputNome.setAttribute("style","outline-color: #00ff00;");
         lblNome.setAttribute("style","color: #00ff00;");
     }
+
+
+});
+
+const inputSegundoNome = document.querySelector("#segundoNome");
+inputNome.addEventListener("focus", ()=>{
+    inputNome.setAttribute("style","outline-color: #ff0000;");
+})
+
+inputSegundoNome.addEventListener("keyup", ()=>{
+
+    const segundoNome = document.querySelector("label[for='segundoNome']");
+    if(inputSegundoNome.value.length === '' || inputSegundoNome.value.length< 3){
+        inputSegundoNome.setAttribute("style","outline-color: #ff0000;");
+        segundoNome.setAttribute("style","color: #ff0000;");
+    }else{
+        inputSegundoNome.setAttribute("style","outline-color: #00ff00;");
+        segundoNome.setAttribute("style","color: #00ff00;");
+    }
+
+});
+inputSegundoNome.addEventListener('blur', ()=>{
+    if (inputSegundoNome.value === '' || inputSegundoNome.value.length < 5) {
+      mostrarErro('O campo deve conter pelo menos 5 caracteres, e não pode estar vazio');
+
 });
 inputNome.addEventListener('blur', ()=>{
     if (inputNome.value === '' || inputNome.value.length < 5) {
       mostrarErro('O campo deve conter pelo menos 5 caracteres.');
+
     } else {
       removerErro();
     }
@@ -36,6 +66,9 @@ inputNome.addEventListener('blur', ()=>{
       erroNome.remove();
       erroNome = null;
     }
+
+  }
+=======
   }
 const inputEmail = document.querySelector("#email");
 inputEmail.addEventListener("focus", ()=>{
@@ -130,3 +163,4 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 });
+
