@@ -1,3 +1,14 @@
+
+function toggleDarkMode() {
+    let body = document.body;
+    let currentBackgroundColor = body.style.backgroundColor;
+        if (currentBackgroundColor === "" || currentBackgroundColor === "rgb(255, 255, 255)") {
+        body.style.backgroundColor = "#212121";
+    } else {
+        body.style.backgroundColor = "#ffffff";
+    }
+}
+
 //NOME
 const inputNome = document.querySelector("#primeiroNome");
 let erroNome;
@@ -162,4 +173,5 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 })
 });
+
 
