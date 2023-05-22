@@ -20,8 +20,7 @@ inputNome.addEventListener("keyup", ()=>{
         inputNome.setAttribute("style","outline-color: #00ff00;");
         lblNome.setAttribute("style","color: #00ff00;");
     }
-
-
+    }
 });
 
 const inputSegundoNome = document.querySelector("#segundoNome");
@@ -41,11 +40,13 @@ inputSegundoNome.addEventListener("keyup", ()=>{
     }
 
 });
+
 inputSegundoNome.addEventListener('blur', ()=>{
     if (inputSegundoNome.value === '' || inputSegundoNome.value.length < 5) {
       mostrarErro('O campo deve conter pelo menos 5 caracteres, e não pode estar vazio');
-
+    }
 });
+
 inputNome.addEventListener('blur', ()=>{
     if (inputNome.value === '' || inputNome.value.length < 5) {
       mostrarErro('O campo deve conter pelo menos 5 caracteres.');
@@ -54,6 +55,7 @@ inputNome.addEventListener('blur', ()=>{
       removerErro();
     }
   });
+
   function mostrarErro(mensagem) {
     
     erroNome = document.createElement('p');
@@ -69,7 +71,6 @@ inputNome.addEventListener('blur', ()=>{
 
   }
 
-  }
 const inputEmail = document.querySelector("#email");
 inputEmail.addEventListener("focus", ()=>{
     inputEmail.setAttribute("style","outline-color: #ff0000;");
@@ -179,5 +180,4 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
       
 });
 
-});
 
