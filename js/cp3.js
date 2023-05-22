@@ -58,6 +58,7 @@ const inputSenha = document.querySelector("#senha");
 inputSenha.addEventListener("focus", ()=>{
     inputSenha.setAttribute("style","outline-color: #ff0000;");
 })
+});
 
 inputSenha.addEventListener("keyup", ()=>{
 
@@ -88,4 +89,4 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
         lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
-});
+})
