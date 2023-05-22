@@ -89,3 +89,4 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
 });
+
