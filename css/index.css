@@ -22,7 +22,7 @@ body {
 }
 
 .left-login > h1 {
-  color: #036e4e;
+  color: #046e81;
   margin-left: 25%;
 }
 
@@ -48,7 +48,7 @@ img{
   align-items: center;
   flex-direction: column;
   padding: 30px 35px;
-  background: #292438;
+  background: #046e81;
   border-radius: 20px;
   box-shadow: 0px 10px 40px #00000056;
 }
@@ -67,7 +67,7 @@ img{
   border: none;
   border-radius: 10px;
   padding: 15px;
-  background: #514869;
+  background: #14363b;
   color: #f0ffffde;
   font-size: 12pt;
   box-shadow: 0px 10px 40px #00000056;
@@ -95,7 +95,7 @@ img{
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 3px;
-  color:#2b132b;
+  color:#14363b;
   cursor: pointer;
   box-shadow:  0px 10px 40px -12px #00ff8052;
 
@@ -111,7 +111,7 @@ width: 100%;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 3px;
-  color:#2b132b;
+  color:#14363b;
   cursor: pointer;
   box-shadow:  0px 10px 40px -12px #00ff8052;
 }
