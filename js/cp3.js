@@ -118,7 +118,6 @@ inputSenha.addEventListener("focus", ()=>{
     inputSenha.addEventListener("focus", ()=>{
 
     inputSenha.setAttribute("style","outline-color: #ff0000;");
-})})
 
 inputSenha.addEventListener("keyup", ()=>{
 
@@ -129,6 +128,19 @@ inputSenha.addEventListener("keyup", ()=>{
     }else{
         inputSenha.setAttribute("style","outline-color: #00ff00;");
         lblSenha.setAttribute("style","color: #00ff00;");
+    }
+});
+const inputSenha = document.querySelector("#senha");
+const eyePass = document.querySelector(".fa");
+
+eyePass.addEventListener("click", ()=>{
+    const inputSenha = document.querySelector("#senha");
+    if(inputSenha.getAttribute("type") == "password"){
+        inputSenha.setAttribute("type","text");
+        eyePass.setAttribute("class","fa fa-eye-slash");
+    }else{
+       inputSenha.setAttribute("type","password");
+       eyePass.setAttribute("class","fa fa-eye");
     }
 });
 
@@ -148,6 +160,6 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
         lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
     }
     //inputSenha.setAttribute("style","outline-color: #ff0000;");
+})
 });
-
 
