@@ -54,10 +54,10 @@ inputEmail.addEventListener("keyup", ()=>{
     }
 
 
-const inputSenha = document.querySelector("#senha");
-inputSenha.addEventListener("focus", ()=>{
+    const inputSenha = document.querySelector("#senha");
+    inputSenha.addEventListener("focus", ()=>{
     inputSenha.setAttribute("style","outline-color: #ff0000;");
-})
+})})
 
 inputSenha.addEventListener("keyup", ()=>{
 
