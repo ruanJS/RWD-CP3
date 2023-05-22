@@ -148,6 +148,11 @@ inputConfirmacaoDeSenha.addEventListener("keyup", ()=>{
         lblConfirmacaoDeSenha.setAttribute("style","color: #00ff00;");
     }
 
+    //inputSenha.setAttribute("style","outline-color: #ff0000;");
+
+});
+
+
     function validarFormulario(event) {
         event.preventDefault(); 
 
